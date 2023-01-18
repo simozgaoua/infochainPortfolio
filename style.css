@@ -6,11 +6,14 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     background-image: url('./img/background_image.png');
+
 }
 
 body {
 
     font-size: larger;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 :root {
@@ -19,6 +22,55 @@ body {
     --purple: #14044d;
     --purple-lighter: #761b94;
     --white-gray: #c6c5d4;
-
 }
 
+.name {
+    color: #716b94;
+}
+
+.navbar {
+    margin: 20px 10px;
+}
+
+
+.navbar .container ul {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+    list-style: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    font-size: larger;
+    font-weight: bold;
+    list-style: none;
+}
+
+li {
+    list-style: none;
+    padding-right: 100px;
+}
+
+/* header */
+
+.header .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.header p {
+    font-size: 60px;
+
+}
