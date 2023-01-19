@@ -4,10 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>work</title>
+    <meta name="description" content="work page">
+    <link rel="icon" href="img/icons8-portefeuille-30(1).png" type="image/x-icon">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    
+    <header>
+        <div class="nav_cont">
+            <ul class="nav_bar">
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <h2>work</h2>
+            <div class="underline"></div>
+            <input type="radio" name="categories" id="All" value="All">
+            <input type="radio" name="categories" id="Css" value="Css">
+            <input type="radio" name="categories" id="Js" value="Js">
+            <ul class="filters">
+                <li><label for="All">All</label></li>
+                <li><label for="Css">Css</label></li>
+                <li><label for="Js">Js</label></li>
+            </ul>
+            <div class="cards_cont">
+                <div class="card" data-category="Css">
+                    <div class="img_cont">
+                    <img src="img/GOT.jpg" alt="league of legends project" width="200px" height="400px">
+                    </div>
+                    <div class="about_project">
+                        <h4>Game of thrones</h4>
+                        <h6>Html/Css</h6>
+                        <a href="GOT.html">
+                            <button>Learn More</button>
+                        </a>
+                    </div>
+                </div> 
+                <div class="card" data-category="Css">
+                    <div class="img_cont">
+                    <img src="img/breaking bad.jpg" alt="project 2" width="200px" height="400px">
+                    </div>
+                    <div class="about_project">
+                        <h4>Breaking bad</h4>
+                        <h6>Html/Css</h6>
+                        <a href="GOT.html">
+                            <button>Learn More</button>
+                        </a>
+                    </div>
+                </div> 
+                <div class="card" data-category="Js">
+                    <div class="img_cont">
+                    <img src="img/mr robot.jpg" alt="project 3" width="200px" height="400px">
+                    </div>
+                    <div class="about_project">
+                        <h4>Mr robot</h4>
+                        <h6>Java Script</h6>
+                        <a href="GOT.html">
+                            <button>Learn More</button>
+                        </a>
+                    </div>
+                </div> 
+                <div class="card" data-category="Css">
+                    <div class="img_cont">
+                    <img src="img/prison break.jpg" alt="project 4" width="200px" height="400px">
+                    </div>
+                    <div class="about_project">
+                        <h4>Prison break</h4>
+                        <h6>html/css</h6>
+                        <a href="GOT.html">
+                            <button>Learn More</button>
+                        </a>
+                    </div>
+                </div> 
+                <div class="card" data-category="Js">
+                    <div class="img_cont">
+                    <img src="img/vikings.jpg" alt="project 5" width="200px" height="400px">
+                    </div>
+                    <div class="about_project">
+                        <h4>vikings</h4>
+                        <h6>Java Script</h6>
+                        <a href="GOT.html">
+                            <button>Learn More</button>
+                        </a>
+                    </div>
+                </div>  
+                
+            </div>
+        </section>
+    </main>
 </body>
-</html>
