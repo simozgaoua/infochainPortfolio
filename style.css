@@ -6,14 +6,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     background-image: url('./img/background_image.png');
-
 }
 
 body {
 
     font-size: larger;
-    font-size: 16px;
-    line-height: 1.5;
 }
 
 :root {
@@ -22,55 +19,261 @@ body {
     --purple: #14044d;
     --purple-lighter: #761b94;
     --white-gray: #c6c5d4;
+
+}
+
+/*------------------------ nav_bar --------------------------*/
+.nav_cont {
+    margin: 1.8rem;
+    display: flex;
+    justify-content: end;
+}
+
+.nav_bar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_bar li {
+    padding-right: 5rem;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.nav_bar a:any-link {
+    text-decoration: none;
+    color: #14044D;
+    text-transform: capitalize;
+
+}
+
+.nav_bar a:hover,
+a:focus {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+/*-------------------------- main ----------------------------*/
+.container {
+    display: flex;
+    max-width: 800px;
+    margin: 50px auto;
+    font-size: xx-large;
+    text-transform: capitalize;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p_cont {
+    margin-top: 120px;
+    text-align: center;
 }
 
 .name {
     color: #716b94;
 }
 
-.navbar {
-    margin: 20px 10px;
+.arrow1 {
+    font-size: larger;
+    color: var(--purple);
 }
 
+.arrow2 {
+    font-size: larger;
+    color: whitesmoke;
+    display: none;
+    margin-left: 5px;
+}
 
-.navbar .container ul {
-    flex: 1;
+.view_work_cont button {
+    background: transparent;
+    width: 200px;
+    height: 50px;
+    border: 2px var(--purple-light) solid;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0.5rem;
+}
+
+.view_work_cont button h3 {
+    background: transparent;
+}
+
+.view_work_cont button:hover,
+.view_work_cont button:focus {
+    background-color: #716b94;
+    color: whitesmoke;
+    border: 2px whitesmoke solid;
+    cursor: pointer;
+}
+
+:is(.view_work_cont button:hover, .view_work_cont button:focus-within) .arrow1 {
+    display: none;
+}
+
+:is(.view_work_cont button:hover, .view_work_cont button:focus-within) .arrow2 {
+    display: inline;
+    background: transparent;
+}
+
+/*----------------------------- work ------------------------*/
+.container h2 {
+    color: var(--purple);
+}
+
+.underline {
+    width: 120px;
+    height: 5px;
+    background: var(--purple);
+    content: "";
+    border-radius: 3px;
+    transform: translateY(-12px);
+}
+
+.cards_cont {
+    margin-top: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 }
 
-
-.navbar a {
-    text-decoration: none;
-    font-size: larger;
-    font-weight: bold;
-    list-style: none;
+.card:hover,
+.card:focus-within {
+    border: 2px solid #716b94;
+    cursor: pointer;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
-    font-size: larger;
-    font-weight: bold;
-    list-style: none;
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-li {
-    list-style: none;
-    padding-right: 100px;
-}
-
-/* header */
-
-.header .container {
+.about_project {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: medium;
     align-items: center;
-    margin-top: 200px;
+    text-align: center;
+    gap: 1rem;
+    display: none;
+
 }
 
-.header p {
-    font-size: 60px;
+.about_project h4 {
+    color: var(--purple);
+    padding: 10px;
+    font-weight: 500;
+}
 
+.about_project h6 {
+    color: #716b94;
+    padding: 5px;
+}
+
+.about_project button {
+    background: transparent;
+    width: 130px;
+    height: 35px;
+    border: 2px var(--purple-light) solid;
+    font-size: 13px;
+    margin: 1rem;
+}
+
+.about_project button:hover,
+.about_project button:focus {
+    background-color: #716b94;
+    color: whitesmoke;
+    border: 2px whitesmoke solid;
+    cursor: pointer;
+}
+
+:is(.card:hover, .card:focus-within) .img_cont {
+    display: none;
+}
+
+:is(.card:hover, .card:focus-within) .about_project {
+    display: block;
+}
+
+/*-----------------filter-------------*/
+input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+
+.filters {
+    margin: 1rem;
+    display: flex;
+    gap: 4rem;
+}
+
+.filters * {
+    display: inline-block;
+}
+
+.filters label {
+    background: transparent;
+    width: 100px;
+    height: 30px;
+    border: 2px var(--purple-light) solid;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filters label:hover {
+    background-color: #716b94;
+    color: whitesmoke;
+    border: 2px #716b94 solid;
+    cursor: pointer;
+}
+
+[value="All"]:checked~.filters [for="All"],
+[value="Css"]:checked~.filters [for="Css"],
+[value="Js"]:checked~.filters [for="Js"] {
+    background-color: #716b94;
+    color: whitesmoke;
+    border: 2px #716b94 solid;
+}
+
+[value="All"]:checked~.cards_cont [data-category] {
+    display: flex;
+}
+
+[value="Css"]:checked~.cards_cont .card:not([data-category~="Css"]),
+[value="Js"]:checked~.cards_cont .card:not([data-category~="Js"]) {
+    display: none;
+}
+
+/*--------------------------  league project --------------------------*/
+.containerL {
+    display: flex;
+    width: 80%;
+    margin: 100px auto;
+    font-size: xx-large;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description_cont {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.description_cont p {
+    font-size: x-large;
 }
